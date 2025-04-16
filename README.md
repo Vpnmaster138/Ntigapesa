@@ -1,8 +1,5 @@
 # Ntigapesa
 Make money online 
-
-
-<!DOCTYPE html>
 <html lang="sw">
 <head>
     <meta charset="UTF-8">
