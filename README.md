@@ -1,141 +1,368 @@
-# Ntigapesa
-Make money online 
+<!DOCTYPE html>
 <html lang="sw">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NtigaTV | VPN Master</title>
+    <title>Mwongozo wa Maombi ya Mkopo - HESLB</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header, footer {
-            background-color: #003366;
-            color: red;
-            text-align: center;
-            padding: 15px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 30px auto;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #f5f5f5;
         }
-        input, select, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #ccc;
+        header {
+            background-color: #1a5276;
+            color: white;
+            padding: 20px;
+            text-align: center;
             border-radius: 5px;
+            margin-bottom: 20px;
         }
-        .hidden {
-            display: none;
+        .logo {
+            max-width: 150px;
+            margin-bottom: 10px;
         }
-        .link {
-            color: #4CAF50;
+        nav {
+            background-color: #2980b9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            color: white;
             text-decoration: none;
+            font-weight: bold;
         }
-        .dashboard-card {
-            background: #e0f7fa;
-            margin-top: 15px;
-            padding: 10px;
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
             border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a5276;
+            color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .step-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .step-box {
+            text-align: center;
+            width: 18%;
+            min-width: 150px;
+            margin-bottom: 15px;
+        }
+        .step-number {
+            background-color: #1a5276;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 10px;
+            font-weight: bold;
+        }
+        .info-box {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .eligibility-box {
+            background-color: #eaf2f8;
+            border-left: 4px solid #2980b9;
+        }
+        .warning-box {
+            background-color: #fef9e7;
+            border-left: 4px solid #b7950b;
+        }
+        .documents-box {
+            background-color: #e8f8f5;
+            border-left: 4px solid #0e6251;
+        }
+        .faq-item {
+            background-color: #f2f3f4;
+            padding: 10px 15px;
+            border-left: 4px solid #1a5276;
+            margin-bottom: 10px;
+        }
+        .contact-box {
+            text-align: center;
+            background-color: #1a5276;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .flex-container {
+            display: flex;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .flex-image {
+            width: 200px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            .flex-image {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            .step-box {
+                width: 100%;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav li {
+                margin-bottom: 8px;
+            }
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Karibu NtigaTV</h1>
-</header>
-
-<!-- Login Section -->
-<section id="login-section" class="container">
-    <h2>Ingia kwenye Akaunti</h2>
-    <form id="login-form">
-        <label for="email">Barua Pepe:</label>
-        <input type="email" id="email" required placeholder="Ingiza barua pepe yako">
-
-        <label for="password">Neno la Siri:</label>
-        <input type="password" id="password" required placeholder="Ingiza neno la siri">
-
-        <label for="phone">Namba ya Simu:</label>
-        <div style="display: flex;">
-            <select required style="width: 30%; margin-right: 5px;">
-                <option value="+255">+255</option>
-                <option value="+254">+254</option>
-                <option value="+256">+256</option>
-            </select>
-            <input type="tel" required placeholder="Namba ya simu" style="width: 70%;">
+    <header>
+        <img src="heslb_logo.png" alt="Logo ya HESLB" class="logo">
+        <h1>Mwongozo wa Maombi ya Mkopo wa Elimu</h1>
+        <p>Ufunguzi wa fursa za elimu kwa wanafunzi wa Tanzania</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#mwanzo">Mwanzo</a></li>
+            <li><a href="#mambo-muhimu">Mambo Muhimu</a></li>
+            <li><a href="#kanuni">Kanuni</a></li>
+            <li><a href="#maombi">Jinsi ya Kuomba</a></li>
+            <li><a href="#maswali">Maswali Yanayoulizwa Mara kwa Mara</a></li>
+        </ul>
+    </nav>
+    
+    <img src="wanafunzi.jpg" alt="Wanafunzi wa Tanzania" class="hero-image">
+    
+    <!-- Ukurasa wa Kwanza: Mwanzo -->
+    <div class="section" id="mwanzo">
+        <h2>Karibu kwenye Mwongozo wa Maombi ya Mkopo</h2>
+        <p>Huduma ya Mikopo ya Elimu (HESLB) ni taasisi ya serikali inayotoa mikopo kwa wanafunzi wenye uwezo wa kimasomo lakini wenye changamoto za kifedha. Kupitia tovuti hii, utapata maelekezo yote unayohitaji kuhusu mchakato wa kuomba mkopo, mahitaji, na majibu ya maswali yako.</p>
+        
+        <div style="display: flex; justify-content: space-around; margin-top: 20px; flex-wrap: wrap;">
+            <div style="text-align: center; margin: 10px;">
+                <img src="icon_calendar.png" alt="Kalenda" style="width: 50px;">
+                <p><strong>Majira ya Maombi</strong></p>
+                <p>Agosti 1 - Oktoba 31</p>
+            </div>
+            <div style="text-align: center; margin: 10px;">
+                <img src="icon_document.png" alt="Nyaraka" style="width: 50px;">
+                <p><strong>Mahitaji ya Nyaraka</strong></p>
+                <p>Vyeti, picha, na barua</p>
+            </div>
+            <div style="text-align: center; margin: 10px;">
+                <img src="icon_help.png" alt="Usaidizi" style="width: 50px;">
+                <p><strong>Usaidizi na Ushauri</strong></p>
+                <p>022 550 5700</p>
+            </div>
         </div>
-
-        <button type="submit">Ingia</button>
-        <p style="text-align:center; margin-top:10px;">
-            <a href="https://youtube.com/@ntigatv" class="link" target="_blank">Ingia bila kujaza</a>
-        </p>
-        <p style="text-align:center;">Huna akaunti? <a href="#" class="link">Jisajili</a></p>
-    </form>
-</section>
-
-<!-- VPN Master Section -->
-<section id="vpn-section" class="container hidden">
-    <h2>VPN MASTER</h2>
-    <p><strong>Developer:</strong> MR.IT a.k.a VPN Master The Future Man</p>
-    <p><strong>Kazi:</strong> Inakupa internet bure kupitia njia za siri</p>
-    <p><strong>Tools:</strong> TLS, HTTP, SSL, DNS, na UDP</p>
-    <p><strong>Network:</strong> Free Internet Provider</p>
-    <button onclick="goToDashboard()">Nenda kwenye Dashboard</button>
-    <button onclick="logout()">Toka</button>
-</section>
-
-<!-- Dashboard Section -->
-<section id="dashboard-section" class="container hidden">
-    <h2>Dashboard</h2>
-    <div class="dashboard-card"><strong>Watumiaji:</strong> 1,234</div>
-    <div class="dashboard-card"><strong>Bonus:</strong> TZS 120,000</div>
-    <div class="dashboard-card"><strong>Withdrawals:</strong> TZS 75,000</div>
-    <div class="dashboard-card"><strong>Referral Links:</strong> <a href="#">ntigapesa.com/ref/yourcode</a></div>
-    <button onclick="goToVPN()">Rudi VPN MASTER</button>
-    <button onclick="logout()">Toka</button>
-</section>
-
-<footer>
-    <p>&copy; 2025 NtigaTV | VPN Master</p>
-</footer>
-
-<script>
-    const loginForm = document.getElementById('login-form');
-    const loginSection = document.getElementById('login-section');
-    const vpnSection = document.getElementById('vpn-section');
-    const dashboardSection = document.getElementById('dashboard-section');
-
-    loginForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        loginSection.classList.add('hidden');
-        vpnSection.classList.remove('hidden');
-    });
-
-    function goToDashboard() {
-        vpnSection.classList.add('hidden');
-        dashboardSection.classList.remove('hidden');
-    }
-
-    function goToVPN() {
-        dashboardSection.classList.add('hidden');
-        vpnSection.classList.remove('hidden');
-    }
-
-    function logout() {
-        vpnSection.classList.add('hidden');
-        dashboardSection.classList.add('hidden');
-        loginSection.classList.remove('hidden');
-    }
-</script>
-
+    </div>
+    
+    <!-- Ukurasa wa Pili: Mambo Muhimu -->
+    <div class="section" id="mambo-muhimu">
+        <h2>Mambo Muhimu Kabla ya Kuomba</h2>
+        
+        <div class="flex-container">
+            <img src="eligibility.jpg" alt="Mahitaji ya kustahiki" class="flex-image">
+            <div>
+                <h3>Mahitaji ya Kustahiki</h3>
+                <ul>
+                    <li>Kuwa mwenyeji wa Tanzania</li>
+                    <li>Kupata maalumu ya kujiunga na chuo kikuu au taasisi ya elimu ya juu</li>
+                    <li>Kuwa na uhitaji wa kifedha</li>
+                    <li>Kufaulu mitihani ya kidato cha nne na cha sita kwa alama zinazostahiki</li>
+                    <li>Kuwa na cheti cha kuzaliwa na kitambulisho cha taifa</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="flex-container">
+            <div>
+                <h3>Aina za Mikopo</h3>
+                <ul>
+                    <li><strong>Mkopo wa Kawaida:</strong> Kwa wanafunzi wa shahada ya kwanza</li>
+                    <li><strong>Mkopo wa Maalum:</strong> Kwa walemavu na makundi maalum</li>
+                    <li><strong>Mkopo wa Juu:</strong> Kwa kozi maalumu zinazohitaji gharama kubwa</li>
+                </ul>
+            </div>
+            <img src="loan_types.jpg" alt="Aina za mikopo" class="flex-image">
+        </div>
+        
+        <div class="info-box eligibility-box">
+            <h3 style="color: #1a5276;">⏳ Muda wa Maombi</h3>
+            <p>Maombi ya mkopo hufunguliwa kwa kipindi cha <strong>Agosti 1 hadi Oktoba 31</strong> kila mwaka. Hakikisha unatumia fursa hii kwa wakati.</p>
+            <img src="deadline.jpg" alt="Mwisho wa maombi" style="width: 100%; border-radius: 5px; margin-top: 10px;">
+        </div>
+    </div>
+    
+    <!-- Ukurasa wa Tatu: Kanuni na Sheria -->
+    <div class="section" id="kanuni">
+        <h2>Kanuni na Sheria za HESLB</h2>
+        
+        <div class="flex-container">
+            <img src="rules.jpg" alt="Kanuni za HESLB" class="flex-image">
+            <div>
+                <h3>Kanuni za Msingi</h3>
+                <ol>
+                    <li>Mkopo ni wa kusomeshwa tu - hauwezi kutumiwa kwa matumizi mengine</li>
+                    <li>Mwanafunzi anapaswa kusoma kwa uaminifu na kupita mitihani</li>
+                    <li>Mikopo italipwa moja kwa moja kwenye akaunti ya chuo</li>
+                    <li>Baada ya kuhitimu, mkopo utalipwa kwa mujibu wa mkataba</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="info-box warning-box">
+            <h3 style="color: #b7950b;">⚠️ Makosa Yanayoweza Kukufanya Usipate Mkopo</h3>
+            <ul>
+                <li>Kutoa taarifa za uwongo</li>
+                <li>Kuchelewa kuomba</li>
+                <li>Kutokamilisha nyaraka zote zinazohitajika</li>
+                <li>Kushindwa kufuata maagizo ya mchakato wa maombi</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h3>Vifungu vya Sheria Vinavyohusika</h3>
+            <p>HESLB inafanya kazi kwa kufuata sheria na kanuni zifuatazo:</p>
+            <img src="law_book.jpg" alt="Kitabu cha sheria" style="float: right; width: 150px; margin-left: 20px;">
+            <ul>
+                <li>Sheria ya Mikopo ya Elimu Na. 9 ya mwaka 2004</li>
+                <li>Kanuni za Mikopo ya Elimu za mwaka 2007</li>
+                <li>Miongozo ya Mikopo ya Elimu ya HESLB</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Ukurasa wa Nne: Jinsi ya Kuomba -->
+    <div class="section" id="maombi">
+        <h2>Mchakato wa Kuomba Mkopo</h2>
+        
+        <div class="step-container">
+            <div class="step-box">
+                <div class="step-number">1</div>
+                <img src="step1.jpg" alt="Jicho la kwanza" style="width: 100%; border-radius: 5px;">
+                <p><strong>Jisajili kwenye mfumo</strong></p>
+                <p>Tembelea tovuti ya HESLB na ujisajili kwa kutumia namba yako ya NIDA</p>
+            </div>
+            
+            <div class="step-box">
+                <div class="step-number">2</div>
+                <img src="step2.jpg" alt="Jicho la pili" style="width: 100%; border-radius: 5px;">
+                <p><strong>Jaza fomu ya maombi</strong></p>
+                <p>Jaza taarifa zote kwa uaminifu na uhakiki</p>
+            </div>
+            
+            <div class="step-box">
+                <div class="step-number">3</div>
+                <img src="step3.jpg" alt="Jicho la tatu" style="width: 100%; border-radius: 5px;">
+                <p><strong>Pakia nyaraka</strong></p>
+                <p>Pakia nakala za vyeti na hati zote zinazohitajika</p>
+            </div>
+            
+            <div class="step-box">
+                <div class="step-number">4</div>
+                <img src="step4.jpg" alt="Jicho la nne" style="width: 100%; border-radius: 5px;">
+                <p><strong>Malipo ya ada</strong></p>
+                <p>Lipia ada ya maombi kupitia njia zilizowekwa</p>
+            </div>
+            
+            <div class="step-box">
+                <div class="step-number">5</div>
+                <img src="step5.jpg" alt="Jicho la tano" style="width: 100%; border-radius: 5px;">
+                <p><strong>Subiri majibu</strong></p>
+                <p>Utapewa taarifa kupitia mfumo wa HESLB</p>
+            </div>
+        </div>
+        
+        <div class="info-box documents-box">
+            <h3 style="color: #0e6251;">📝 Nyaraka Muhimu za Kuomba</h3>
+            <ul>
+                <li>Nakala ya cheti cha kuzaliwa</li>
+                <li>Nakala ya kitambulisho cha taifa (NIDA)</li>
+                <li>Nakala ya vyeti vya kidato cha nne na cha sita</li>
+                <li>Picha ya pasipoti</li>
+                <li>Barua ya kujiunga na chuo</li>
+                <li>Taarifa za wazazi/walezi</li>
+            </ul>
+            <img src="documents.jpg" alt="Nyaraka muhimu" style="width: 100%; border-radius: 5px; margin-top: 10px;">
+        </div>
+    </div>
+    
+    <!-- Ukurasa wa Tano: Maswali Yanayoulizwa Mara kwa Mara -->
+    <div class="section" id="maswali">
+        <h2>Maswali Yanayoulizwa Mara kwa Mara (FAQ)</h2>
+        
+        <div style="margin-bottom: 20px;">
+            <div class="faq-item">
+                <h3>Q: Ninaweza kuomba mkopo kama nimesoma kidato cha nne tu?</h3>
+                <p>A: Hapana, unahitaji kuwa na vyeti vya kidato cha nne na cha sita kwa kufaulu kwa alama zinazostahiki.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q: Je, mkopo utanikamilia gharama zote za masomo?</h3>
+                <p>A: HESLB huweka kiwango cha mkopo kulingana na kozi na gharama za chuo. Inaweza isikamilie gharama zote.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Q: Je, ninaweza kuomba tena mkopo nikiwa chuoni?</h3>
+                <p>A: Ndio, lakini utahitaji kufanya maombi mapya kila mwaka na kufanya vizuri katika masomo.</p>
+            </div>
+        </div>
+        
+        <div class="contact-box">
+            <h3>Bado una maswali?</h3>
+            <p>Wasiliana nasi kupitia:</p>
+            <p>Simu: 022 550 5700</p>
+            <p>Barua pepe: info@heslb.go.tz</p>
+            <p>Au tembelea ofisi zetu za HESLB jijini Dar es Salaam</p>
+        </div>
+        
+        <img src="contact.jpg" alt="Mawasiliano" style="width: 100%; border-radius: 5px; margin-top: 20px;">
+    </div>
+    
+    <footer>
+        <p>© 2023 HESLB - Huduma ya Mikopo ya Elimu. Haki zote zimehifadhiwa.</p>
+        <p>Tovuti hii ni ya kirafiki kwa matumizi ya simu janja na kompyuta</p>
+    </footer>
 </body>
 </html>
